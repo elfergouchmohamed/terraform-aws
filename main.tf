@@ -9,7 +9,7 @@ terraform {
 
 #Configuration the AWS provider
 provider "aws" {
-  region     = "us-east-1"
+  region     = "your-reagion"
   access_key = "your-aws-access-key"
   secret_key = "your-aws-secret-key"
 }
@@ -53,7 +53,7 @@ resource "aws_route_table" "project-rt" {
 resource "aws_subnet" "project-subnet" {
   vpc_id            = aws_vpc.project-vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "your-region"
 
   tags = {
     Name = "project-subnet"
